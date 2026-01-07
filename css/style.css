@@ -1,0 +1,152 @@
+/* --- CSS VARIABLES & RESET --- */
+:root {
+    --sg-red: #EE3434;
+    --sg-white: #FFFFFF;
+    --bg-color: #F4F4F4;
+    --text-main: #333333;
+    --text-muted: #666666;
+    --accent-blue: #005DAA;
+    --xp-color: #FFC107;
+    --border-color: #DDDDDD;
+    --header-height: 160px;
+    --footer-height: 140px;
+    --modal-overlay: rgba(0,0,0,0.6);
+}
+
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+html, body {
+    margin: 0; padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    height: 100%; width: 100%; /* Added width 100% */
+    overflow: hidden;
+    background-color: var(--bg-color); color: var(--text-main);
+    -webkit-font-smoothing: antialiased;
+}
+
+.mobile-container {
+    display: flex; flex-direction: column; 
+    height: 100vh; /* Force full viewport height */
+    max-width: 600px;
+    margin: 0 auto; background: var(--sg-white); position: relative;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    /* Ensure it takes height on desktop too */
+    min-height: 100vh; 
+}
+
+/* --- ANIMATIONS --- */
+@keyframes popIn {
+    0% { transform: scale(0.9); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* --- TOP: DASHBOARD --- */
+.dashboard {
+    flex-shrink: 0; height: var(--header-height); background: var(--sg-white);
+    border-bottom: 1px solid var(--border-color); padding: 10px 15px;
+    display: flex; flex-direction: column; justify-content: space-between; z-index: 10;
+}
+
+.xp-bar-container { margin-bottom: 10px; }
+.xp-bar { height: 12px; background-color: #eee; border-radius: 6px; overflow: hidden; border: 1px solid #ddd; }
+.xp-fill { height: 100%; background-color: var(--xp-color); width: 0%; transition: width 0.5s cubic-bezier(0.25, 1, 0.5, 1); }
+.level-display { font-size: 0.8rem; font-weight: bold; color: var(--text-muted); margin-top: 4px; display: flex; justify-content: space-between; }
+
+.stats-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-bottom: 5px; }
+.stat { text-align: center; background: #f9f9f9; padding: 8px 4px; border-radius: 8px; transition: transform 0.1s; }
+.stat:active { transform: scale(0.95); }
+.stat-value { font-weight: 800; font-size: 1rem; color: var(--accent-blue); }
+.stat-label { font-size: 0.7rem; color: var(--text-muted); }
+
+.quick-actions { position: absolute; bottom: -20px; right: 20px; display: flex; gap: 10px; z-index: 20; }
+.fab { width: 44px; height: 44px; border-radius: 50%; border: none; background: var(--sg-red); color: white; font-size: 1.2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.2); display: flex; align-items: center; justify-content: center; transition: transform 0.1s, background 0.2s; cursor: pointer; }
+.fab:active { transform: scale(0.9); background: #cc0000; }
+
+/* --- MIDDLE: CAROUSEL --- */
+.carousel-wrapper { 
+    flex: 1; 
+    position: relative; 
+    overflow: hidden; 
+    background: var(--bg-color);
+    /* Force width/height calculation */
+    width: 100%; 
+}
+
+.carousel { 
+    display: flex; 
+    overflow-x: auto; 
+    scroll-snap-type: x mandatory; 
+    height: 100%; 
+    width: 100%; 
+    scrollbar-width: none; 
+    scroll-behavior: smooth; 
+}
+.carousel::-webkit-scrollbar { display: none; }
+
+.slide { 
+    flex: 0 0 100%; 
+    scroll-snap-align: start; 
+    padding: 25px 20px 20px 20px; 
+    overflow-y: auto; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    width: 100%; /* Ensure slide fills track */
+}
+
+/* Inputs & Buttons */
+input[type="number"], select {
+    width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; font-size: 1rem;
+    background: white; transition: border-color 0.2s; -webkit-appearance: none; appearance: none;
+}
+input:focus, select:focus { outline: none; border-color: var(--accent-blue); }
+
+.btn-primary {
+    width: 100%; padding: 14px; margin-top: 20px; background: var(--accent-blue); color: white;
+    border: none; border-radius: 8px; font-size: 1rem; font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: background 0.2s;
+}
+.btn-primary:active { background: #004580; transform: translateY(1px); }
+
+.carousel-nav { position: absolute; bottom: 10px; left: 0; width: 100%; display: flex; justify-content: center; gap: 8px; z-index: 5; pointer-events: none; }
+.nav-dot { width: 8px; height: 8px; background: rgba(0,0,0,0.2); border-radius: 50%; transition: background 0.3s; }
+.nav-dot.active { background: var(--accent-blue); width: 12px; }
+
+/* --- BOTTOM: PROGRESSION --- */
+.progression { flex-shrink: 0; height: var(--footer-height); background: var(--sg-white); border-top: 1px solid var(--border-color); padding: 10px 15px; display: flex; flex-direction: column; justify-content: space-between; font-size: 0.8rem; }
+.badge-scroller { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 5px; min-height: 40px; }
+.badge { width: 40px; height: 40px; background: #eee; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; border: 2px solid transparent; flex-shrink: 0; }
+.badge.unlocked { border-color: var(--xp-color); background: #fff9e6; animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+.next-level, .recent-activity { display: flex; justify-content: space-between; align-items: center; }
+.activity-log { font-size: 0.75rem; color: var(--text-muted); font-style: italic; }
+
+/* --- SHARE MODAL --- */
+.share-modal-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: var(--modal-overlay); z-index: 1000;
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; pointer-events: none; transition: opacity 0.3s;
+}
+.share-modal-overlay.active { opacity: 1; pointer-events: auto; }
+
+.share-modal {
+    background: white; width: 90%; max-width: 320px; border-radius: 12px;
+    padding: 20px; text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transform: translateY(20px); transition: transform 0.3s;
+}
+.share-modal-overlay.active .share-modal { transform: translateY(0); }
+
+.share-modal h3 { margin: 0 0 10px 0; color: var(--sg-red); }
+.share-modal p { font-size: 0.9rem; color: #666; margin-bottom: 20px; }
+
+.share-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.share-btn {
+    padding: 10px; border: none; border-radius: 6px; font-size: 0.9rem;
+    cursor: pointer; font-weight: bold; color: white;
+}
+.share-wa { background: #25D366; }
+.share-fb { background: #1877F2; }
+.share-tw { background: #1DA1F2; }
+.share-cp { background: #666; grid-column: span 2; }
+
+.close-modal { margin-top: 15px; background: none; border: none; text-decoration: underline; color: #999; cursor: pointer; font-size: 0.8rem; }

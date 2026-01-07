@@ -1,0 +1,46 @@
+{
+  "xp_system": {
+    "base_xp_per_level": 150,
+    "calculators": {
+      "gst": 50,
+      "inflation": 75,
+      "car_cost": 100,
+      "kopi_index": 150,
+      "big3_tradeoff": 125,
+      "rsbr_ratio": 80,
+      "emergency_fund": 100
+    },
+    "bonuses": {
+      "action_plan_started": 200
+    }
+  },
+  "levels": [
+    { "level": 1, "xp_required": 0, "title": "Inflation Newbie" },
+    { "level": 2, "xp_required": 150, "title": "Budget Beginner" },
+    { "level": 3, "xp_required": 300, "title": "Calculator Novice", "badge": "calculator_novice", "unlocks": "gst" },
+    { "level": 4, "xp_required": 450, "title": "Awareness Builder" },
+    { "level": 5, "xp_required": 600, "title": "Cost Conscious" },
+    { "level": 6, "xp_required": 750, "title": "Kopi Regular", "badge": "kopi_regular", "unlocks": "kopi_index" },
+    { "level": 7, "xp_required": 900, "title": "Budget Planner" },
+    { "level": 8, "xp_required": 1050, "title": "Inflation Fighter" },
+    { "level": 9, "xp_required": 1200, "title": "Budget Analyst", "badge": "budget_analyst", "unlocks": "inflation" },
+    { "level": 10, "xp_required": 1350, "title": "Savings Strategist" },
+    { "level": 11, "xp_required": 1500, "title": "Lifestyle Auditor" },
+    { "level": 12, "xp_required": 1650, "title": "Housing Strategist", "badge": "housing_strategist", "unlocks": "big3_tradeoff" },
+    { "level": 13, "xp_required": 1800, "title": "Transport Analyst" },
+    { "level": 14, "xp_required": 1950, "title": "Food Cost Engineer" },
+    { "level": 15, "xp_required": 2100, "title": "Transport Guru", "badge": "transport_guru", "unlocks": "car_cost" },
+    { "level": 16, "xp_required": 2250, "title": "Budget Master" },
+    { "level": 17, "xp_required": 2400, "title": "Inflation Analyst" },
+    { "level": 18, "xp_required": 2550, "title": "Hawker Hero", "badge": "hawker_hero", "unlocks": "rsbr_ratio" },
+    { "level": 19, "xp_required": 2700, "title": "Savings Expert" },
+    { "level": 20, "xp_required": 2850, "title": "Financial Planner" },
+    { "level": 21, "xp_required": 3000, "title": "RSBR Master", "badge": "rsbr_master", "unlocks": "emergency_fund" },
+    { "level": 22, "xp_required": 3150, "title": "Wealth Defender" },
+    { "level": 23, "xp_required": 3300, "title": "Retirement Planner" },
+    { "level": 24, "xp_required": 3450, "title": "Inflation Defender", "badge": "inflation_defender", "unlocks": "action_plan" },
+    { "level": 25, "xp_required": 3600, "title": "Financial Survivor" },
+    { "level": 26, "xp_required": 3750, "title": "Wealth Builder" },
+    { "level": 27, "xp_required": 3900, "title": "Singapore Survivor", "badge": "singapore_survivor" }
+  ]
+}

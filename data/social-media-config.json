@@ -1,0 +1,154 @@
+{
+  "appInfo": {
+    "name": "Singapore Inflation Survivor",
+    "website": "https://survivingsgdinflation.com",
+    "hashtag": "#SingaporeInflationSurvivor",
+    "defaultCampaign": "badge_achievement"
+  },
+  "socialPlatforms": {
+    "whatsapp": {
+      "baseUrl": "https://wa.me/?text=",
+      "utmParams": "utm_source=whatsapp&utm_medium=social&utm_campaign=badge_share",
+      "messageTemplate": "I just earned the {{badgeName}} badge in Singapore Inflation Survivor! {{badgeDescription}} {{url}}"
+    },
+    "telegram": {
+      "baseUrl": "https://t.me/share/url?url=",
+      "utmParams": "utm_source=telegram&utm_medium=social&utm_campaign=badge_share",
+      "messageTemplate": "Check out my achievement!"
+    },
+    "facebook": {
+      "baseUrl": "https://www.facebook.com/sharer/sharer.php?u=",
+      "utmParams": "utm_source=facebook&utm_medium=social&utm_campaign=badge_share",
+      "quote": "I survived Singapore inflation and earned a badge!",
+      "hashtag": "#SingaporeInflationSurvivor"
+    },
+    "twitter": {
+      "baseUrl": "https://twitter.com/intent/tweet?text=",
+      "utmParams": "utm_source=twitter&utm_medium=social&utm_campaign=badge_share",
+      "messageTemplate": "Just earned {{badgeName}} in Singapore Inflation Survivor! {{badgeDescription}} {{url}}",
+      "hashtags": "SingaporeInflationSurvivor,PersonalFinanceSG,BudgetingSG"
+    },
+    "linkedin": {
+      "baseUrl": "https://www.linkedin.com/sharing/share-offsite/?url=",
+      "utmParams": "utm_source=linkedin&utm_medium=social&utm_campaign=badge_share"
+    },
+    "copyLink": {
+      "utmParams": "utm_source=copy_link&utm_medium=direct&utm_campaign=badge_share",
+      "messageTemplate": "I earned the {{badgeName}} badge in Singapore Inflation Survivor! {{badgeDescription}}"
+    }
+  },
+  "badgeTemplates": {
+    "emergencyFundComplete": {
+      "id": "emergency_fund_complete",
+      "shareMessage": "🏆 I just completed my 3-tier emergency fund! Singapore's inflation won't catch me off guard. #FinancialResilienceSG",
+      "shareImage": "badge_emergency_fund.png",
+      "urlPath": "/badges/emergency-fund-master"
+    },
+    "kopiWarrior": {
+      "id": "kopi_warrior",
+      "shareMessage": "☕ Earned Kopi Warrior badge! Saved $500+ by choosing hawker kopi over CBD lattes. Every dollar fights inflation! #KopiIndex",
+      "shareImage": "badge_kopi_warrior.png",
+      "urlPath": "/badges/kopi-warrior"
+    },
+    "btoSaver": {
+      "id": "bto_saver",
+      "shareMessage": "🏠 BTO Saver badge unlocked! Saved 25% of my down payment goal despite Singapore's housing inflation. #BTOSG #HDB",
+      "shareImage": "badge_bto_saver.png",
+      "urlPath": "/badges/bto-saver"
+    },
+    "carFreeChampion": {
+      "id": "car_free_champion",
+      "shareMessage": "🚫🚗 Car-Free Champion! Saving $1,500+/month by using public transport. That's $18,000/year fighting inflation! #CarFreeSG",
+      "shareImage": "badge_car_free.png",
+      "urlPath": "/badges/car-free-champion"
+    },
+    "inflationBeater": {
+      "id": "inflation_beater",
+      "shareMessage": "📈 Inflation Beater badge! My savings rate is now higher than Singapore's personal inflation rate. #BeatInflationSG",
+      "shareImage": "badge_inflation_beater.png",
+      "urlPath": "/badges/inflation-beater"
+    },
+    "cpfMaster": {
+      "id": "cpf_master",
+      "shareMessage": "🛡️ CPF Master badge! Optimized my CPF to earn 4-5% guaranteed returns, beating inflation. #CPFSG #Retirement",
+      "shareImage": "badge_cpf_master.png",
+      "urlPath": "/badges/cpf-master"
+    },
+    "hawkerHero": {
+      "id": "hawker_hero",
+      "shareMessage": "🍜 Hawker Hero badge! Reduced food costs by 30% while enjoying Singapore's best local food. #SupportHawkers",
+      "shareImage": "badge_hawker_hero.png",
+      "urlPath": "/badges/hawker-hero"
+    },
+    "debtDestroyer": {
+      "id": "debt_destroyer",
+      "shareMessage": "💸 Debt Destroyer badge! Cleared $5,000+ in high-interest debt. Now my money works for me, not banks! #DebtFreeSG",
+      "shareImage": "badge_debt_destroyer.png",
+      "urlPath": "/badges/debt-destroyer"
+    },
+    "rsbrBalanced": {
+      "id": "rsbr_balanced",
+      "shareMessage": "⚖️ RSBR Balanced badge! Achieved the 65/20/15 budget ratio that actually works for Singaporeans. #BudgetingSG",
+      "shareImage": "badge_rsbr_balanced.png",
+      "urlPath": "/badges/rsbr-balanced"
+    },
+    "threeLayerMaster": {
+      "id": "three_layer_master",
+      "shareMessage": "📊 3-Layer Budget Master! Using Singapore's unique budgeting system to survive volatile costs. #SingaporeBudget",
+      "shareImage": "badge_three_layer.png",
+      "urlPath": "/badges/three-layer-master"
+    }
+  },
+  "utmParameters": {
+    "sources": {
+      "whatsapp": "whatsapp",
+      "telegram": "telegram",
+      "facebook": "facebook",
+      "twitter": "twitter",
+      "linkedin": "linkedin",
+      "copy": "copy_link"
+    },
+    "mediums": {
+      "social": "social",
+      "direct": "direct",
+      "message": "message"
+    },
+    "campaigns": {
+      "badge_share": "badge_achievement_share",
+      "goal_complete": "goal_achievement_share",
+      "milestone": "milestone_share"
+    },
+    "content": {
+      "badge_id": "{{badgeId}}",
+      "user_tier": "{{userTier}}"
+    }
+  },
+  "shareConfig": {
+    "appendUserReferral": false,
+    "shortenUrls": false,
+    "trackShares": true,
+    "defaultImage": "https://survivingsgdinflation.com/share-default.png",
+    "iosAppStore": "https://apps.apple.com/sg/app/idXXXXXXXXXX",
+    "androidPlayStore": "https://play.google.com/store/apps/details?id=com.survivingsg"
+  },
+  "localization": {
+    "en_SG": {
+      "shareTitle": "I earned a badge in Singapore Inflation Survivor!",
+      "shareDescription": "Join me in surviving Singapore's rising costs with strategies that actually work for locals.",
+      "callToAction": "Start your survival journey today",
+      "hashtags": "#SingaporeInflationSurvivor #PersonalFinanceSG #BudgetingSG #SurvivingSG"
+    },
+    "zh_SG": {
+      "shareTitle": "我在新加坡通货膨胀生存者中获得徽章！",
+      "shareDescription": "和我一起用真正适合新加坡人的策略应对物价上涨。",
+      "callToAction": "立即开始您的生存之旅",
+      "hashtags": "#新加坡通货膨胀生存者 #新加坡理财 #新加坡预算 #生存新加坡"
+    },
+    "ms_SG": {
+      "shareTitle": "Saya dapat lencana dalam Singapore Inflation Survivor!",
+      "shareDescription": "Sertai saya menghadapi kenaikan kos sara hidup di Singapura dengan strategi yang berkesan untuk penduduk tempatan.",
+      "callToAction": "Mulakan perjalanan survival anda hari ini",
+      "hashtags": "#SingaporeInflationSurvivor #KewanganPeribadiSG #BajetSG #SurvivingSG"
+    }
+  }
+}

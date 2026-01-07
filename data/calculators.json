@@ -1,0 +1,93 @@
+{
+  "calculators": [
+    {
+      "id": "gst",
+      "name": "GST Impact Calculator",
+      "desc": "Calculate how the 2% GST hike hits your wallet.",
+      "xp": 50,
+      "inputs": [
+        { "id": "spending", "label": "Monthly Spending ($)", "type": "number", "placeholder": "2500", "default": 2500 }
+      ],
+      "formula": "spending * 0.02"
+    },
+    {
+      "id": "inflation",
+      "name": "Personal Inflation Rate",
+      "desc": "Your lifestyle determines your real inflation.",
+      "xp": 75,
+      "inputs": [
+        { "id": "housing", "label": "Housing Weight (%)", "type": "range", "min": 0, "max": 100, "default": 35 },
+        { "id": "transport", "label": "Transport Weight (%)", "type": "range", "min": 0, "max": 100, "default": 15 },
+        { "id": "food", "label": "Food Weight (%)", "type": "range", "min": 0, "max": 100, "default": 25 }
+      ]
+    },
+    {
+      "id": "car_cost",
+      "name": "Car Cost Reality",
+      "desc": "The true cost of owning a car in SG.",
+      "xp": 100,
+      "inputs": [
+        { "id": "has_car", "label": "Do you own a car?", "type": "select", "options": ["Yes", "No"] }
+      ]
+    },
+    {
+      "id": "kopi_index",
+      "name": "Kopi-Index Tracker",
+      "desc": "See how much you save by choosing hawker over cafe.",
+      "xp": 150,
+      "inputs": [
+        { "id": "frequency", "label": "Drinks per week", "type": "number", "default": 5 },
+        { "id": "type", "label": "Current Habit", "type": "select", "options": ["CBD Latte ($7.50)", "Hawker Kopi ($1.50)"] }
+      ]
+    },
+    {
+      "id": "big3_tradeoff",
+      "name": "Big 3 Trade-off",
+      "desc": "Balance Housing, Transport, and Food.",
+      "xp": 125,
+      "inputs": [
+        { "id": "income", "label": "Monthly Take Home ($)", "type": "number", "default": 3500 },
+        { "id": "housing_pct", "label": "Housing (%)", "type": "range", "min": 0, "max": 100, "default": 30 },
+        { "id": "transport_pct", "label": "Transport (%)", "type": "range", "min": 0, "max": 100, "default": 10 },
+        { "id": "food_pct", "label": "Food (%)", "type": "range", "min": 0, "max": 100, "default": 20 }
+      ]
+    },
+    {
+      "id": "rsbr_ratio",
+      "name": "RSBR Ratio Calculator",
+      "desc": "Check if you fit the Realistic Singapore Budget Ratio.",
+      "xp": 80,
+      "inputs": [
+        { "id": "essentials", "label": "Essentials ($)", "type": "number", "default": 2000 },
+        { "id": "wants", "label": "Wants ($)", "type": "number", "default": 500 },
+        { "id": "savings", "label": "Savings ($)", "type": "number", "default": 500 }
+      ]
+    },
+    {
+      "id": "emergency_fund",
+      "name": "Emergency Fund Optimizer",
+      "desc": "How long can you survive without a paycheck?",
+      "xp": 100,
+      "inputs": [
+        { "id": "expenses", "label": "Monthly Expenses ($)", "type": "number", "default": 2500 },
+        { "id": "savings", "label": "Current Cash Savings ($)", "type": "number", "default": 5000 }
+      ]
+    },
+    {
+      "id": "action_plan",
+      "name": "12-Month Action Plan",
+      "desc": "Master your finances with this roadmap.",
+      "xp": 200,
+      "inputs": [],
+      "checklist": [
+        { "id": "cp_calc_gst", "text": "Analyze GST Impact", "req_calc": "gst" },
+        { "id": "cp_calc_inf", "text": "Check Personal Inflation", "req_calc": "inflation" },
+        { "id": "cp_audit_sub", "text": "Cancel 1 unused subscription" },
+        { "id": "cp_kopi_sw", "text": "Switch to Hawker Kopi for 1 week" },
+        { "id": "cp_rsbr", "text": "Check RSBR Ratio", "req_calc": "rsbr_ratio" },
+        { "id": "cp_emerg", "text": "Set Emergency Fund Goal", "req_calc": "emergency_fund" },
+        { "id": "cp_share", "text": "Share your results (Social)" }
+      ]
+    }
+  ]
+}

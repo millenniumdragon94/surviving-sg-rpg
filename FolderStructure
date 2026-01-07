@@ -1,0 +1,68 @@
+/surviving-sg-rpg
+│
+├── index.html                 # Main HTML structure (imports CSS/JS)
+├── manifest.json              # PWA Manifest (Name, Icons, Start URL)
+├── service-worker.js          # PWA Service Worker (Offline caching)
+│
+├── css/
+│   └── style.css              # All responsive styles & animations
+│
+├── js/
+│   ├── main.js                # App entry point & data fetching
+│   ├── rpg-system.js          # XP logic, Leveling, Badges, Storage
+│   ├── calculators.js         # Logic for 7 calculators & formulas
+│   ├── ui.js                  # Carousel logic, DOM manipulation, FABs
+│   └── social-share.js        # Social media utility class
+│
+├── data/                      # The JSON files you provided
+│   ├── singapore-2024.json
+│   ├── rpg-system.json
+│   ├── calculators.json
+│   └── social-media-config.json
+│
+└── assets/
+    └── icons/                 # PWA Icons (Required for installability)
+        ├── icon-72x72.png
+        ├── icon-96x96.png
+        ├── icon-128x128.png
+        ├── icon-144x144.png
+        ├── icon-152x152.png
+        ├── icon-192x192.png   # Main Android icon
+        ├── icon-384x384.png
+        ├── icon-512x512.png   # Main iOS/Splash icon
+        └── favicon.ico
+        
+// Open the Console and run this:
+localStorage.clear();
+sessionStorage.clear();
+location.reload();
+
+📋 Progression Map (Unlock Logic)
+Level	XP Needed	Badge Earned	Action Required	Calculator Unlocked
+Lvl 1	0 XP	None	Start Game	🟢 GST Calculator (Free)
+Lvl 2	150 XP	None	Continue Calculating	Locked
+Lvl 3	300 XP	🎯 Calculator Novice	Share Badge	🔓 Kopi Index Tracker
+Lvl 6	750 XP	☕ Kopi Regular	Share Badge	🔓 Personal Inflation Rate
+Lvl 9	1,200 XP	📊 Budget Analyst	Share Badge	🔓 Big 3 Trade-off
+Lvl 12	1,650 XP	🏠 Housing Strategist	Share Badge	🔓 Car Cost Reality
+Lvl 15	2,100 XP	🚗 Transport Guru	Share Badge	🔓 RSBR Ratio Calculator
+Lvl 18	2,550 XP	🍜 Hawker Hero	Share Badge	🔓 Emergency Fund Optimizer
+Lvl 21	3,000 XP	⚖️ RSBR Master	Share Badge	🔓 Action Plan
+Lvl 24	3,450 XP	🛡️ Inflation Defender	Share Badge	All Tools Unlocked
+Lvl 27	3,900 XP	🏆 Singapore Survivor	Final Level	GAME COMPLETE
+⚡ XP Earning Conditions
+How fast you level up depends on these activities:
+
+Source	XP Value	Condition	Frequency
+GST Calculator	+50 XP	Complete Calculation	Once
+Personal Inflation	+75 XP	Complete Calculation	Once
+Car Cost Reality	+100 XP	Complete Calculation	Once
+Kopi Index	+150 XP	Complete Calculation	Once
+Big 3 Trade-off	+125 XP	Complete Calculation	Once
+RSBR Ratio	+80 XP	Complete Calculation	Once
+Emergency Fund	+100 XP	Complete Calculation	Once
+Action Plan	+200 XP	Check all 7 items	Once
+☕ Log Kopi	+10 XP	Tap FAB Button	Once Per Day
+💰 Log Savings	+5 XP	Tap FAB Button	Once Per Day
+
+

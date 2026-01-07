@@ -1,0 +1,45 @@
+{
+  "inflation": {
+    "official": 3.4,
+    "personal_typical_range": [7, 12],
+    "breakdown": {
+      "housing_rent": 35,
+      "housing_own": 0,
+      "transport_car": 25,
+      "transport_public": 3,
+      "food_hawker": 45,
+      "food_restaurant": 30,
+      "childcare": 15,
+      "utilities": 30,
+      "healthcare": 8
+    }
+  },
+  "prices": {
+    "gst": { "current": 9, "increase": 2, "previous": 7 },
+    "coe": { "cat_a_current": 95000, "cat_a_2020": 33000, "cat_a_peak": 106000 },
+    "housing": {
+      "bto_4room_non_mature": 400000,
+      "bto_4room_mature": 500000,
+      "resale_4room_mature": 600000,
+      "rent_3room": 2800
+    },
+    "transport": {
+      "car_true_monthly": 1800,
+      "breakdown": { "depreciation": 550, "loan": 650, "petrol": 180, "parking": 180, "insurance_tax": 290 },
+      "public_alternative": 278
+    },
+    "food": {
+      "hawker_meal": 5.5,
+      "hawker_2020": 3.5,
+      "food_court": 8.5,
+      "restaurant": 25,
+      "delivery_premium_multiplier": 2.7
+    },
+    "beverages": {
+      "kopi_hawker": 1.5,
+      "kopi_2020": 1.0,
+      "latte_cbd": 7.5,
+      "seven_eleven": 2.5
+    }
+  }
+}

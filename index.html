@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>SG Inflation Survivor RPG</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#EE3434">
+    <!-- Inside <head> of index.html -->
+    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+</head>
+<body>
+
+<div class="mobile-container">
+    <!-- TOP: DASHBOARD -->
+    <header class="dashboard">
+        <div class="xp-bar-container">
+            <div class="level-display">
+                <span>Level 1: Inflation Newbie</span>
+                <span>0 / 150 XP</span>
+            </div>
+            <div class="xp-bar">
+                <div class="xp-fill" id="xp-bar-fill"></div>
+            </div>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat">
+                <div class="stat-value" id="total-xp">0</div>
+                <div class="stat-label">XP</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value" id="tools-count">0/8</div>
+                <div class="stat-label">Tools</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value" id="total-saved">$0</div>
+                <div class="stat-label">Saved</div>
+            </div>
+        </div>
+
+        <div class="quick-actions">
+            <button class="fab" title="Log today's coffee">☕</button>
+            <button class="fab" title="Log a saving">💰</button>
+        </div>
+    </header>
+
+    <!-- MIDDLE: CAROUSEL -->
+    <main class="carousel-wrapper">
+        <div class="carousel" id="carousel-track">
+            <!-- Slides will be injected here by JS -->
+        </div>
+        <div class="carousel-nav" id="carousel-dots">
+            <!-- Dots injected here -->
+        </div>
+    </main>
+
+    <!-- BOTTOM: PROGRESSION -->
+    <footer class="progression">
+        <div class="badge-showcase">
+            <h4>Your Badges</h4>
+            <div class="badge-scroller" id="badge-container">
+                <!-- Badges injected here -->
+            </div>
+        </div>
+
+        <div class="next-level">
+            <div class="next-badge">Next: Calculator Novice</div>
+            <div class="xp-needed">150 XP needed</div>
+        </div>
+
+        <div class="recent-activity">
+            <div class="activity-log"></div>
+        </div>
+    </footer>
+</div>
+
+<script src="js/social-share.js"></script>
+<script src="js/rpg-system.js"></script>
+<script src="js/calculators.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
