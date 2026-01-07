@@ -26,8 +26,9 @@ class RPGSystem {
             level: 1,
             savedAmount: 0,
             badges: [],
-            sharedBadges: [], 
-            unlockedCalculators: ['gst'], 
+            completedCalculators: [], // <-- THIS WAS MISSING. Added it back.
+            sharedBadges: [],
+            unlockedCalculators: ['gst'],
             actionPlanItems: [], 
             activityLog: [ { text: "Welcome to SG Inflation Survivor!", timestamp: new Date().toISOString() } ]
         };
